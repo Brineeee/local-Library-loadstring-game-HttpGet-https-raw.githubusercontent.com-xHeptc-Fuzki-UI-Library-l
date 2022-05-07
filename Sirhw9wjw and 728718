@@ -1,0 +1,107 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Fuzki-UI-Library/main/FuzkiLibrary.lua"))()
+
+local Main = Library:Create("SkeleHub", "KeySystem")
+
+local Main1 = Main:CreateSection("Home")
+
+local Preview = Main:CreateSection("Settings")
+
+Main1:CreateLabel("Key System / SkeleHub")
+
+Main1:CreateButton("Get Key", "Get Key = No Links -->", function()
+
+    print("Wow, printed")
+
+    wait(5)
+
+       game.StarterGui:SetCore("SendNotification", {
+
+    Title = "";
+
+    Text = "Key = TEST_KEY";
+
+    Duration = 3;
+
+})
+
+end)
+
+Main1:CreateTextBox("Type Key -->", "Enter Key!", function(key)
+
+         if key == "TEST_KEY" then
+
+local Sound = Instance.new("Sound",game:GetService("SoundService"))
+
+Sound.SoundId = "rbxassetid://232127604"
+
+Sound:Play()
+
+    game.StarterGui:SetCore("SendNotification", {
+
+    Title = "Key System";
+
+    Text = "Correct Key...";
+
+    Duration = 5;
+
+})
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Brineeee/GoldenTool-ShitLoader/main/lua"))() 
+
+ else
+
+local Sound = Instance.new("Sound",game:GetService("SoundService"))
+
+Sound.SoundId = "rbxassetid://232127604"
+
+Sound:Play()
+
+    game.StarterGui:SetCore("SendNotification", {
+
+    Title = "Key System";
+
+    Text = "Incorrect Key...";
+
+    Duration = 5;
+
+}) 
+
+end
+
+end) 
+
+Preview:CreateLabel("Credits / SkeleHub")
+
+Preview:CreateButton("Credits", "Credits Here -->", function()
+
+    print("Wow, printed")
+
+    wait(1)
+
+       game.StarterGui:SetCore("SendNotification", {
+
+    Title = "";
+
+    Text = "Script : TIKTOK (goldenwars._.official) ";
+
+    Duration = 3;
+
+})
+
+end)
+
+Preview:CreateButton("Rejoin", "Rejoin Here -->", function()
+
+       game:GetService("TeleportService"):Teleport(game.PlaceId)
+
+end) 
+
+Preview:CreateButton("Sound", "Test Sound Here -->", function()
+
+    local Sound = Instance.new("Sound",game:GetService("SoundService"))
+
+Sound.SoundId = "rbxassetid://232127604"
+
+Sound:Play()
+
+end) 
